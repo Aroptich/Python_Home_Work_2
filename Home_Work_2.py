@@ -58,4 +58,4 @@ def dict_comprehension() -> dict:
         return dict_comprehension()
 
 
-print(f'Сумма {dict_comprehension()}')
+# print(f'Сумма {dict_comprehension()}')
