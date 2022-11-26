@@ -1,3 +1,6 @@
+import random
+
+
 # Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
 # def sum_nambers() -> int:
 #     """Сумма цифр вещественного числа"""
@@ -81,4 +84,16 @@ def products_of_numbers_on_index():
         return products_of_numbers_on_index()
 
 
-products_of_numbers_on_index()
+# products_of_numbers_on_index()
+
+
+# Реализуйте алгоритм перемешивания списка.
+
+def list_shuffling() -> list:
+    list_shuf = [_ for _ in range(11)]
+    print(f'Исходный список: {list_shuf}')
+    random.shuffle(list_shuf)
+    print(f'Перемешанный список: {list_shuf}')
+
+
+list_shuffling()
