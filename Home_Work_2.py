@@ -59,3 +59,26 @@ def dict_comprehension() -> dict:
 
 
 # print(f'Сумма {dict_comprehension()}')
+
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N].
+# Найдите произведение элементов на указанных индексах. Индексы вводятся одной строкой, через пробел.
+
+def products_of_numbers_on_index():
+    try:
+        N = int(input("Введите количество элементов в списке: "))
+        if type(N) in [int]:
+            list_of_numbers = [i for i in range(-N, N + 1) if i != 0]
+            print(f'В сгенерированном списке {len(list_of_numbers)} элементов\n'
+                  f'Введите индескы элеменов от 0 до {len(list_of_numbers)}')
+            element_index = list(map(int, (input("Введите индексы элементов списка через пробел: ").split())))
+            result = 1
+            for i in element_index:
+                result *= list_of_numbers[i]
+            print(result)
+    except ValueError:
+        print("Количество элементов в списке должено быть целым числом!")
+        print("Повторите ввод!")
+        return products_of_numbers_on_index()
+
+
+products_of_numbers_on_index()
