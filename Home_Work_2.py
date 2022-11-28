@@ -8,9 +8,7 @@ import random
 #     try:
 #         number = float(input("Введите число: ").replace(',', '.'))
 #         if type(number) in [int, float]:
-#             a = []
-#             for i in str(number):
-#                 a.append(i)
+#             a = [i for i in str(number)]
 #             a.remove('.')
 #             if str(number).endswith('.0'):
 #                 str(number).replace('.0', '')
